@@ -31,7 +31,7 @@ class RSA :
     
     def segment_text(self,text):
         bytes = text.encode('utf-8')
-        segment_size = self.length // 8
+        segment_size = 128 // 8
         segments = []
         for i in range(0,len(bytes),segment_size):
             segment = bytes[i:i+segment_size]
